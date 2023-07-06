@@ -1,0 +1,58 @@
+/* Header.css */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  margin:0;
+  background-color: #f9f9f900;
+  color: #eceaea;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.logo-header {
+  height: 50px;
+}
+
+.welcome-section {
+  flex-grow: 0;
+  text-align: center;
+}
+
+.logout-link {
+  color: rgb(229, 255, 248);
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.telegram-button {
+  background: linear-gradient(to right, #0088cc, #00aced);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  animation: pulseGames 2s infinite;
+
+}
+
+.instagram-button {
+  background: linear-gradient(to right, #dd2a7b, #e95950);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  animation: pulseGames 2s infinite;
+
+}
