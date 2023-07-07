@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import { FiLock, FiCheckCircle, FiUser, FiEye, FiEyeOff } from 'react-icons/fi';
 import logo from '../img/logo.png';
@@ -11,8 +11,19 @@ function Login() {
   const [senha, setSenha] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState(''); 
+  const [isValidUser, setIsValidUser] = useState(true);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (usuario.includes('@')) {
+      setIsValidUser(false);
+      setErrorMessage('Apenas nome de usuário para entrar. O e-mail não funciona.');
+    } else {
+      setIsValidUser(true);
+      setErrorMessage('');
+    }
+  }, [usuario]);
 
   const enviarFormulario = async (event) => {
     event.preventDefault();
@@ -55,7 +66,6 @@ function Login() {
 
   return (
     <div className="login-container">
-      
       <form onSubmit={enviarFormulario}>
         <img className="logo" src={logo} width={120} alt="Logo" />
         <h2>Para ter acesso ao hack faça seu login na Heads Bet</h2>
@@ -92,7 +102,7 @@ function Login() {
           {errorMessage && <p className="error-message">{errorMessage}</p>} 
         </div>
 
-        <button className="login-button" type="submit">
+        <button className="login-button" type="submit" disabled={!isValidUser}>
           <FiCheckCircle className="button-icon" />
           Entrar
         </button>
@@ -104,11 +114,12 @@ function Login() {
         </span>
       </div>
       <div className="register-container">
+        <h3 class="green">Passo a passo para ter acesso ao aplicativo</h3>
         <p>
-          <strong>Esse aplicativo funciona apenas na HeadsBet. Se você ainda não tem cadastro faça agora.</strong>
+          <strong>1º Esse aplicativo funciona apenas na HeadsBet. Se você ainda não tem cadastro faça agora. Clique abaixo.</strong>
         </p>
         <a 
-          href="https://cadastrobob.com/keke-heads" 
+          href="https://go.aff.arvore.club/0r328atz?campaign_id=4472&source_id=mystery-app" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="register-button"
@@ -118,6 +129,7 @@ function Login() {
         <div>
         <img className="logo-bet" width={200} src={logoBet} alt="Logo Bet" />
         </div>
+        <strong>2º Volte a essa página e use seu usuario e senha para logar no app.</strong>
       </div>
     </div>
   );

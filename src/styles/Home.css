@@ -33,23 +33,33 @@
 }
 
 .buttons-social-container{
-  margin-top:20px;
+  margin-top:30px;
+  width: 100%;
+  display:flex;
 }
 
 .telegram-button,
-.instagram-button {
+.instagram-button,
+.whatsapp-button {
   background: linear-gradient(to right, #0088cc, #00aced);
   color: #fff;
   border: none;
+  width: 100%;
+  font-weight: 600;
+  margin: 5px;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
-  margin-right: 16px;
+  padding: 10px;
 }
 
 .instagram-button {
   background: linear-gradient(to right, #dd2a7b, #e95950);
+}
+
+.whatsapp-button {
+  background: linear-gradient(to right, #0a9753, #046348);
 }
 
 /* Adicione outros estilos conforme necessário */

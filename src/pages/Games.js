@@ -51,7 +51,7 @@ function Games() {
         </div>
       </div>
       <Footer />    
-4
+
     </>
   );
 }

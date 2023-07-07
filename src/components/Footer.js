@@ -21,7 +21,7 @@ function Footer() {
         </Link>
       </div>
       <div className="footer-link">
-        <Link to="/esporte" className={location.pathname === '/esporte' ? 'active' : ''}>
+        <Link to="/esportes" className={location.pathname === '/esporte' ? 'active' : ''}>
           <FiActivity size={20} />
           <span>Esportes</span>
         </Link>

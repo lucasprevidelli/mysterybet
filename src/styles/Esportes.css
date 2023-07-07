@@ -1,0 +1,10 @@
+.center{
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50%;
+}
+
+.green{
+  color:aquamarine;
+}

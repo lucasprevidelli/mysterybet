@@ -8,13 +8,19 @@ import Header from '../components/Header';
 import Spinner from '../components/Spinner'; 
 import { FiAlertTriangle } from 'react-icons/fi'; 
 
-
+import '../styles/Esportes.css';
 
 function Esportes() {
 
   return(
-<iframe src="https://cf-iomeu-cdn.relaxg.com/casino/launcher.html?channel=web&amp;gameid=rlx.pgsoft.pgsoft.fortune-tiger&amp;homeurl=https%3A%2F%2Fninecasino.com%2Fredirect-home&amp;jurisdiction=CW&amp;lang=pt_PT&amp;moneymode=fun&amp;partner=softswissrelax&amp;partnerid=492" allowfullscreen="true"></iframe>  )
-}
+    <>
+    <div className='center'>
+    <h2>Em breve!</h2>
+    <p className='green'>O melhor sinais esportivos do país.</p>
+    </div>
+    <Footer></Footer>
+    </>
+  )}
 
 
 export default Esportes;

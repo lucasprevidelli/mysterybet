@@ -256,6 +256,8 @@ margin-bottom: 100px;
 
 .register-container {
   text-align: center;
+  margin: 0 auto;
+  width: 76%;
   margin-top: 20px;
 }
 
@@ -263,6 +265,9 @@ margin-bottom: 100px;
   color: #d3d3d3;
 }
 
+.green{
+  color: #3ac8bd;
+}
 .register-button {
   background: linear-gradient(90deg, #012345 0%, #0056af 100%);
   border: none;
